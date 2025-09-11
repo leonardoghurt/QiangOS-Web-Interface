@@ -1,0 +1,103 @@
+    body {
+	  margin: 0;
+	  height: 100vh;
+	  display: flex;
+	  flex-direction: column;
+	  background: url("https://imgs.search.brave.com/LqzuCXElV0Xp3XFzonTjupguZk2s6SE--qKPuJm4DWI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJzLmNvbS9p/bWFnZXMvaGQvbm9u/LWNvcHlyaWdodGVk/LXJhaW5ib3ctcmF5/cy00eG92MXB6OG5q/aTB6b3ljLmpwZw");
+      background-size: cover;
+	  font-family: "Lucida Grande", sans-serif;
+	}
+
+	
+	header {
+	  height: 48px;
+	  background: linear-gradient(to bottom, #d8d8d8, #b0b0b0);
+	  display: flex;
+	  align-items: center;
+	  justify-content: space-between;
+	  padding: 0 10px;
+	  font-size: large;
+	  color: black;
+	  user-select: none;
+	  border-bottom: 1px solid #888;
+	}
+
+	header .left {
+	  display: flex;
+	  gap: 15px;
+	}
+	header .right {
+	  display: flex;
+	  gap: 10px;
+	}
+
+	
+	main {
+	  flex: 1;
+	  display: flex;
+	  align-items: center;   
+	  justify-content: center; 
+	  padding: 10px; 
+	  box-sizing: border-box;
+	}
+
+	.glass {
+	  width: 145%;
+	  
+	  max-height: 483px;
+	  background: rgba(255, 255, 255, 0.2);
+	  backdrop-filter: blur(12px);
+	  border-radius: 20px;
+	  border: 1px solid rgba(255, 255, 255, 0.3);
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	  padding: 15px;
+	  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+	  color: white;
+	  text-align: center;
+	  font-size: 18px;
+	}
+	
+	footer {
+	  height: 80px;
+	  background: rgba(255, 255, 255, 0.2);
+	  backdrop-filter: blur(6px);
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	  padding-bottom: 10px;
+	  gap: 15px;
+	}
+
+	footer img {
+	  height: 35px;
+	  
+	}
+    footer button {
+    	width: 50px;
+    	height: 50px;
+    	border-radius: 50%;                          /* forma de esfera */
+    	border: 2px solid rgba(255, 255, 255, 0.3);  /* borde semitransparente */
+    	background: rgba(255, 255, 255, 0.1);        /* fondo semitransparente */
+    	backdrop-filter: blur(8px);                  /* efecto cristal */
+    	-webkit-backdrop-filter: blur(8px);          /* para Safari */
+	   	box-shadow: 
+    	    inset -10px -10px 20px rgba(255,255,255,0.2),  /* brillo interno */
+        	inset 10px 10px 20px rgba(0,0,0,0.2),         /* sombra interna */
+	        0 10px 20px rgba(0,0,0,0.3);                  /* sombra externa */
+    	cursor: pointer;
+	    transition: all 0.3s ease;
+	}
+
+footer button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 
+        inset -10px -10px 25px rgba(255,255,255,0.3),
+        inset 10px 10px 25px rgba(0,0,0,0.3),
+        0 15px 25px rgba(0,0,0,0.4);
+}
+
+	footer img:hover {
+	  transform: scale(1.5);
+	}
