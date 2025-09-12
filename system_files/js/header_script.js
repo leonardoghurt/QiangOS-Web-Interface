@@ -4,6 +4,8 @@ function shutdown() {
 }
 function close_app() {
     document.getElementById("running").src = "";
+    app_name = document.getElementById("app_name");
+    app_name.innerText = "Nothing";
 }
 function update_time() {
     const actual_time = new Date();
