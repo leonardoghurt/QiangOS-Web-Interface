@@ -16,6 +16,6 @@ let close_button = document.getElementById("close_button");
 close_button.addEventListener("click", close_app);
 
 let shutdown_button = document.getElementById("shutdown_button");
-close_button.addEventListener("click", shutdown);
+shutdown_button.addEventListener("click", shutdown);
 
 setInterval(update_time, 1000);
