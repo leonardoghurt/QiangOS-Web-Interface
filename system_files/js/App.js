@@ -1,6 +1,8 @@
 export default class App {
-    run(entered_path) {
-        document.getElementById("running").src = entered_path;
+    run() {
+        document.getElementById("running").src = this.path;
+        let app_name = document.getElementById("app_name");
+        app_name.innerText = this.name;
     }
     create_launcher(name, path, icon) {
         let launchpad = document.getElementById("launchpad");
@@ -11,7 +13,7 @@ export default class App {
         img.src = icon;
         button.appendChild(img);
 
-        button.addEventListener("click", () => this.run(this.path));
+        button.addEventListener("click", () => this.run());
         launchpad.appendChild(button);
     }
     constructor(name, path, icon) {

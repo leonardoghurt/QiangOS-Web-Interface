@@ -10,7 +10,7 @@
 
 	
 	header {
-	  height: 48px;
+	  height: 5vh;
 	  background: linear-gradient(to bottom, #d8d8d8, #b0b0b0);
 	  display: flex;
 	  align-items: center;
@@ -30,21 +30,25 @@
 	  display: flex;
 	  gap: 10px;
 	}
+	header button {
+	  height: 4vh;
+	  font-size: smaller;
+	}
 
 	
 	main {
 	  flex: 1;
 	  display: flex;
-	  align-items: center;   
-	  justify-content: center; 
-	  padding: 10px; 
+	  align-items: flex-start;   
+	  justify-content: flex-start; 
+	  padding: 1px; 
 	  box-sizing: border-box;
 	}
 
 	.glass {
 	  width: 145%;
-	  
-	  max-height: 483px;
+	  height: 79vh;
+	  max-height: 79vh;
 	  background: rgba(255, 255, 255, 0.2);
 	  backdrop-filter: blur(12px);
 	  border-radius: 20px;
