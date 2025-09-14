@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music</title>
+    <style>
+        body {
+            color: white;
+            font-size: xx-large;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Music</h1>
+        <a href="index.html"><button>Back</button></a>
+        <br>
+        <br>
+        <br>
+        <br>
+        <iframe id="music_iframe" style="background-color: white;" src="/storage/Music" width="50%" height="100px" frameborder="0"></iframe>
+<script>
+const iframe = document.getElementById('music_iframe');
+
+iframe.addEventListener('load', () => {
+  const doc = iframe.contentDocument || iframe.contentWindow.document;
+  doc.querySelectorAll("h1").forEach(node => node.remove());
+  doc.querySelectorAll("h2").forEach(node => node.remove());
+  
+});
+</script>
+    </center>
+</body>
+</html>
