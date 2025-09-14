@@ -1,10 +1,12 @@
-let actual_time = new Date;
+import Sh from "../js_libs/Sh.js";
+const shell = new Sh();
+
 function shutdown() {
-    window.pywebview.api.exec_com("poweroff");
+    shell.sh("poweroff");
 }
 function close_app() {
     document.getElementById("running").src = "";
-    app_name = document.getElementById("app_name");
+    let app_name = document.getElementById("app_name");
     app_name.innerText = "Nothing";
 }
 function update_time() {
@@ -18,6 +20,6 @@ let close_button = document.getElementById("close_button");
 close_button.addEventListener("click", close_app);
 
 let shutdown_button = document.getElementById("shutdown_button");
-close_button.addEventListener("click", shutdown);
+shutdown_button.addEventListener("click", shutdown);
 
 setInterval(update_time, 1000);

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <style>
+        body {
+            color: white;
+            font-size: xx-large;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        button {
+            width: 100%;
+            height: fit-content;
+        }
+    </style>
+</head>
+<body>
+    <script src="/system_files/js_libs/Sh_no-export.js"></script>
+    <script>
+        const shell = new Sh;
+    </script>
+    <center>
+        <h1>Settings</h1>
+        <p>Network:</p>
+        <table>
+            <tr>
+                <td><button onclick='shell.sh("ip link set eth0 up");'><h1>Configure Ethernet for eth0</h1></button></td>
+            </tr>
+            <tr>
+                <td><button onclick='shell.sh("dhcpcd");'><h1>Enable DHCP</h1></button></td>
+            </tr>
+        </table>
+    </center>
+    
+</body>
+</html>
