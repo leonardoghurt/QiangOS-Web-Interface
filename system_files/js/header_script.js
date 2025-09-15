@@ -4,6 +4,9 @@ const shell = new Sh();
 function shutdown() {
     shell.sh("poweroff");
 }
+function reconfigure_internet() {
+    shell.sh("ip link set eth0 up && dhcpcd");
+}
 function close_app() {
     document.getElementById("running").src = "";
     let app_name = document.getElementById("app_name");
@@ -21,5 +24,8 @@ close_button.addEventListener("click", close_app);
 
 let shutdown_button = document.getElementById("shutdown_button");
 shutdown_button.addEventListener("click", shutdown);
+
+let internet_button = document.getElementById("internet_button");
+internet_button.addEventListener("click", reconfigure_internet);
 
 setInterval(update_time, 1000);
